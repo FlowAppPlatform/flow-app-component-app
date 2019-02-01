@@ -80,7 +80,7 @@ class App extends AppComponent {
       // this flag pops up a DELETE modal when the delete button is clicked. False will not show the modal.
       isValuable: true,
       allowsChildren: true,
-      allowedChildTypes: ['checkbox', 'container', 'directory', 'link', 'image', 'input', 'form', 'search', 'text', 'page', 'loader', 'radio', 'map', 'nav', 'video', 'dropdown'],
+      allowedChildTypes: ['directory', 'page'],
     };
 
     this.state = Object.assign(this.state, newState); // merge two states together, and dont lose any parent state properties.
