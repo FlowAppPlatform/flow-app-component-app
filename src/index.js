@@ -89,8 +89,7 @@ class App extends AppComponent {
   renderContent() {
     return (
       <div>
-        {' '}
-        <div>App </div> {this.renderChildren()}{' '}
+        {this.renderChildren()}
       </div>
     );
   }
