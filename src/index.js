@@ -69,6 +69,32 @@ class App extends AppComponent {
             },
           ],
         },
+        {
+          categoryName: 'Events',
+          categoryDescription: '',
+          properties: [
+            {
+              id: 'on-load',
+              name: 'App Loaded',
+              type: 'graph',
+              options: {},
+              data: null,
+            },
+          ],
+        },
+        {
+          categoryName: 'Roles',
+          categoryDescription: 'Roles for app',
+          properties: [
+            {
+              id: 'role-form',
+              name: 'Add Role',
+              type: 'single-input-form',
+              options: {},
+              data: null,
+            },
+          ],
+        },
       ],
       iconUrl: '/assets/images/app-component.svg',
       name: 'App',
@@ -97,7 +123,7 @@ class App extends AppComponent {
   shouldRenderChild(childId) {
     if (
       this.getComponentType(childId) !== 'page' &&
-      this.getComponentType(childId) !== 'dirctory'
+      this.getComponentType(childId) !== 'directory'
     ) {
       return true;
     }
@@ -106,7 +132,7 @@ class App extends AppComponent {
   }
 
   renderNav() {
-    return <span>Hello</span>;
+    return <span></span>;
   }
 }
 
