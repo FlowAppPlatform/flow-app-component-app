@@ -74,7 +74,7 @@ class App extends AppComponent {
           categoryDescription: '',
           properties: [
             {
-              id: 'on-load',
+              id: 'load',
               name: 'App Loaded',
               type: 'graph',
               options: {},
@@ -110,6 +110,15 @@ class App extends AppComponent {
     };
 
     this.state = Object.assign(this.state, newState); // merge two states together, and dont lose any parent state properties.
+  }
+
+  componentDidMount() {
+    this.triggerGraphEvent('load');
+  }
+
+  triggerGraphEvent = (eventId) => {
+    const graphId = this.getPropertyData(eventId);
+    this.getElementProps().onEvent(graphId);
   }
 
   renderContent() {
